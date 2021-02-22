@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rock Paper and Scissors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% static "css/base.css" %}?{% now "U" %}" rel="stylesheet" />
+  </head>
+  <body>
+      <section class="game">
+        <!--div for player scores-->
+        <div class="score">
+          <div class="player-score">
+            <h2>Player</h2>
+            <p>0</p>
+          </div>
+        <!--div for computer scores-->
+          <div class="computer-score">
+            <h2>Computer</h2>
+            <p>0</p>
+          </div>
+        </div>
+        <!--Game intro div-->
+        <div class="intro">
+          <h1>Rock Paper and Scissors</h1>
+          <button>Let's Play</button>
+        </div>
+        <!--Match div-->
+        <div class="match fadeOut">
+          <h2 class="winner">Choose an option</h2>
+          <!--div that contains the hand images-->
+          <div class="hands">
+            <img class="player-hand" src="{% static "images/rock.png" %}" alt=""/>
+            <img class="computer-hand" src="{% static "images/rock.png" %}" alt=""/>
+          </div>
+          <!--div that contains the option buttons-->
+          <div class="options">
+            <button class="rock">rock</button>
+            <button class="paper">paper</button>
+            <button class="scissors">scissors</button>
+          </div>
+        </div>
+      </section>
+      <script src="{% static "js/game.js" %}?{% now "U" %}" rel="stylesheet"></script>
+  </body>
+</html>
